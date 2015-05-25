@@ -1,0 +1,12 @@
+<h3>Daftar Item PO - Revisi</h3>
+<div class="form-search">
+    Mulai : <input type="text" ui-date ng-model="tanggal.from">
+    Sampai : <input type="text" ui-date ng-model="tanggal.to">
+    <button type="button" class="btn btn-primary" ng-click="tampilkan()" >Tampilkan</button>
+</div>
+<div >
+    <div >
+        <smart-table class="table table-striped table-bordered" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+    
+</div>

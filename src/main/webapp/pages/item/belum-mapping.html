@@ -1,0 +1,29 @@
+<h3>Daftar Obat Belum Termapping</h3>
+
+<div >
+    <div class="control-group" ng-class="{error: formEdit.siteId.$invalid}">
+        <label class="control-label" for="siteId">SiteID : &nbsp;</label>
+        <select ui-select2 id="siteId" ng-model="siteId" data-placeholder="-- Pilih Site --" style='width:200px' >
+            <option></option>
+            <option ng-repeat="s in sites" value="{{s.siteId}}">{{s.siteId}} - {{s.siteName}}</option>
+        </select>
+        <button type="button" class="btn" ng-click="tampilkanItem(siteId)">Refresh</button>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Export To
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li>
+                    <a href="item/belum-mapping-report.pdf?siteId={{siteId}}" target="_blank">Pdf </a>
+                </li>
+                <li>
+                    <a href="item/belum-mapping-report.xls?siteId={{siteId}}" target="_blank">Excel </a>
+                </li>
+            </ul>
+        </div>
+        <!--<a ng-href="item/belum-mapping-report.pdf?siteId={{siteId}}">Unduh PDF</a>-->
+    </div>
+    <div >
+        <smart-table class="table table-striped table-bordered" config="globalConfig" columns="columnCollection" rows="rowCollection"></smart-table>
+    </div>
+    Total Item : {{items.length}}
+</div>

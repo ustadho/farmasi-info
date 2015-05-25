@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ItemBelumMapping" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3851b99d-8da3-475e-9ddb-8b1c4c8bada7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="siteId" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="kode_barang" class="java.lang.String"/>
+	<field name="nama_barang" class="java.lang.String"/>
+	<field name="kons" class="java.lang.String"/>
+	<field name="group_name" class="java.lang.String"/>
+	<field name="stock" class="java.math.BigDecimal"/>
+	<field name="uom_kecil" class="java.lang.String"/>
+	<variable name="nomor" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{kode_barang}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3acb0259-2aee-445a-97df-cfedf8f484e7" x="0" y="0" width="368" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Belum Mapping]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="354967d8-89d1-4787-8040-08ff2c7aa49c" x="31" y="31" width="64" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="1.25" lineStyle="Double"/>
+					<bottomPen lineWidth="1.25" lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ProductID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7efa515e-1e76-470d-ac18-b792cf7377b9" x="95" y="31" width="199" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="1.25" lineStyle="Double"/>
+					<bottomPen lineWidth="1.25" lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="386e3f93-1190-44e0-a88d-49912e185ebd" x="294" y="31" width="74" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="1.25" lineStyle="Double"/>
+					<bottomPen lineWidth="1.25" lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kons]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7978c856-aeb7-4bd8-9119-ae7313559323" x="368" y="31" width="112" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="1.25" lineStyle="Double"/>
+					<bottomPen lineWidth="1.25" lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Groups]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6ee25c5-3694-4895-9a03-dd46ab823474" x="480" y="31" width="75" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="1.25" lineStyle="Double"/>
+					<bottomPen lineWidth="1.25" lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UOM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1354e266-7025-4fce-9f7a-0c7b138c007e" x="0" y="31" width="31" height="20"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="1.25" lineStyle="Double"/>
+					<bottomPen lineWidth="1.25" lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e39e4df9-1f4f-465b-8fbc-22a3cdd42114" x="480" y="0" width="74" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{siteId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement uuid="184c7fdd-d773-4f71-abee-bc86f032174f" x="31" y="0" width="64" height="17"/>
+				<box leftPadding="1" rightPadding="1">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kode_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c6f208c2-5c19-4a22-8950-7809f230f4f0" x="95" y="0" width="199" height="17"/>
+				<box leftPadding="1" rightPadding="1">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5dd243e8-a0f7-4902-9598-d6eacfb59440" x="294" y="0" width="74" height="17"/>
+				<box leftPadding="1" rightPadding="1">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kons}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c3afd1af-20ba-4db1-be69-5fda7020b170" x="368" y="0" width="112" height="17"/>
+				<box leftPadding="1" rightPadding="1">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{group_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7be1c033-74e4-4a4d-a089-2a72e77525db" x="480" y="0" width="74" height="17"/>
+				<box leftPadding="1" rightPadding="1">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{uom_kecil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="031dcef4-a028-42d8-a784-89002abafaee" x="0" y="0" width="31" height="17"/>
+				<box leftPadding="1" rightPadding="1">
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{nomor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
